@@ -20,6 +20,7 @@ int carregaMapa(char **mapa,int linha,int coluna);
 int moviPac(char **mapa,objeto *pacman,char movi,int *ponto);
 int resultado(int *ponto);
 void opcoes ();
+void limpaMapa(char **mapa,int lin);
 
 
 #endif  /*FILE_H*/

@@ -82,22 +82,3 @@ int i;
 	}
 return 0;
 }
-/*
-int main ()
-{
-int ponto;
-jogador v[11];
-jogador player;
-
-*leNome(&player);
-
-scanf(" %d",&player.Pontos);
-
-*recebeRank(v);
-*inserirPlayer(v,player);
-*bubbleSort(v,10);
-*imprimeRank(v);
-*resetRank(v);
-*moveRank(v);
-return 0;
-}*/

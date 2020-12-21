@@ -15,9 +15,6 @@ int iniciancurses()
 return 0;
 }
 
-
-
-
 int moviPac(char **mapa,objeto *pacman,char movi,int *ponto)
 {
 	int aux1=0,aux2=0;
@@ -71,7 +68,7 @@ char** criaMapa(char **mapa,int linha,int coluna)
 int i;
 	mapa = malloc (linha * sizeof (char*)) ;
 	for (i=0; i < linha; i++)
-	  mapa[i] = malloc (coluna * sizeof (char)) ;
+	mapa[i] = malloc (coluna * sizeof (char)) ;
 return mapa;
 }
 
@@ -91,7 +88,6 @@ system("clear");
 		printf("\n\n\n\n\n\n\n\n\n\nPARABENS VOCE SAIU VIVO DO LABIRINTO\n\n\n\n\n\n\n\n\n\n%d Pontos\n\n\n\n\n\n\n\n\n\n\n\n\n\n",*ponto);
 	else
 		printf("\n\n\n\n\n\n\n\n\n\nINFELIZMENTE VOCE FALECEU				Pontuação:%d\n\n\n\n\n\n\n\n\n\n\n\n\n\n",*ponto);
-	printf("Digite Qualquer caracter para sair\n\n\n\n\n");
 	*ponto=0;
 return 0;
 }
@@ -100,4 +96,11 @@ void opcoes (int *op)
 printf("\n\n\n\n");
 printf("1-jogar\n2-Imprimir Rank\n3-Resetar Rank\n0-Sair");
 scanf(" %d",op);
+}
+void limpaMapa(char **mapa,int lin)
+{
+int i,j;
+for (i=0;i<lin;i++)
+	free(mapa[i]);
+free(mapa);
 }

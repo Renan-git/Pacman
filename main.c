@@ -47,6 +47,7 @@ opcoes(&op);/*imprime Opções*/
 		inserirPlayer(v,player);
 		bubbleSort(v,10);
 		resultado(&ponto);
+		limpaMapa(Mapa,TAMLINHA);
 	}
 	else
 		if(op==2)
